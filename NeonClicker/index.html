@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-<meta charset="UTF-8">
-<title>Neon Clicker Pro</title>
-
-<!-- ✅ PWA odkazy -->
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#00ffde">
 <script>
-  // ✅ Registrace Service Workera
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('Service worker registrován:', reg))
-      .catch(err => console.log('Chyba service workeru:', err));
-    });
-  }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+    .then(reg => console.log('✅ Service worker registrován:', reg))
+    .catch(err => console.log('❌ Chyba service workeru:', err));
+  });
+}
 </script>
